@@ -350,6 +350,10 @@ static unsigned int xuartps_calc_baud_divs(unsigned int clk, unsigned int baud,
 	unsigned int bauderror;
 	unsigned int besterror = ~0;
 
+clk=50000000;
+
+baud=115200;
+
 	if (baud < clk / (256 * 65535)) {
 		*div8 = 1;
 		clk /= 8;
